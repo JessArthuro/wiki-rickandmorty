@@ -5,7 +5,7 @@ import InputGroup from "../components/Filter/category/InputGroup";
 function Episodes() {
   const [results, setResults] = useState([]);
   const [info, setInfo] = useState([]);
-  const { air_date, name } = info;
+  const { air_date, episode, name } = info;
   const [id, setId] = useState(1);
 
   const api = `https://rickandmortyapi.com/api/episode/${id}`;
@@ -33,6 +33,7 @@ function Episodes() {
       <h5 className="text-center text-secondary">
         Air Date: {air_date === "" ? "Unknown" : air_date}
       </h5>
+      <h6 className="text-center text-secondary">{episode === "" ? "Unknown" : episode}</h6>
     </div>
 
     <div className="row">
