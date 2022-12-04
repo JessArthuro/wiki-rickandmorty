@@ -1,0 +1,33 @@
+$radius: 10px;
+
+.card {
+  border-radius: $radius;
+  background-color: rgba(235, 248, 255, .04);
+  transition: all .3s linear;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid #00b5cc;
+    background: none;
+    transform: translateY(-5px);
+
+    .name_character {
+      color: #b2df28;
+    }
+  }
+}
+
+.content {
+  padding: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  &.success {
+    background: rgb(85, 204, 68);
+  }
+}

@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #151718;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilos para la pestaña activa en el navbar */
+.active {
+  color: #00b5cc !important;
+  font-weight: bold;
+  border-bottom: 2px solid #b2df28;
+  margin-bottom: -2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* --- Estilos para el acordeon --- */
+.accordion-item {
+  background-color: rgba(235, 248, 255, .02);
+  border: 1px solid rgba(235, 248, 255, .04);
 }
 
-.App-link {
-  color: #61dafb;
+.accordion-button, .accordion-button:not(.collapsed) {
+  background-color: rgba(235, 248, 255, .02);
+  box-shadow: none;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Icono que colapsa el accordeon */
+.accordion-button::after, .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* colores del logo de rick and morty */
+/* azul #00b5cc */
+/* verde #b2df28 */
+/* negro #00333d */
