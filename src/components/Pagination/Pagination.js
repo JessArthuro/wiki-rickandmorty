@@ -3,7 +3,7 @@ import ReactPaginate from "react-paginate";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 function Pagination({ pageNumber, info, setPageNumber }) {
-  // Creamos la funcion pageChange para manejar el cambio de pagina.
+  // Funcion para manejar el cambio de pagina.
   const pageChange = (data) => {
     setPageNumber(data.selected + 1);
   };

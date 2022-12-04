@@ -18,7 +18,11 @@ function Card({ results }) {
             <img className="img-fluid" src={image} alt={name} />
 
             <div className={styles.content}>
-              <h5 className={`${styles.name_character} fw-bold text-truncate my-1`}>{name}</h5>
+              <h5
+                className={`${styles.name_character} fw-bold text-truncate my-1`}
+              >
+                {name}
+              </h5>
 
               <div className="d-flex align-items-center">
                 <span

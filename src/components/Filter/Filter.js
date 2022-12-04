@@ -10,7 +10,7 @@ function Filter({
   setSpecies,
 }) {
 
-  // Creamos esta funcion para poder borrar los filtros y actulizar la pagina.
+  // Funcion para borrar los filtros y actualizar la pagina.
   const clear = () => {
     setStatus("");
     setGender("");

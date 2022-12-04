@@ -25,6 +25,7 @@ function Status({ setStatus, setPageNumber }) {
         data-bs-parent="#accordionExample"
       >
         <div className="accordion-body d-flex flex-wrap gap-3">
+          {/* Mapeo automatico de los datos y creacion de los botones de estado. */}
           {status.map((item, index) => (
             <FilterBtn
               key={index}

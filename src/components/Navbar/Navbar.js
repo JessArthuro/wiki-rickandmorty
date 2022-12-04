@@ -52,7 +52,7 @@ function Navbar() {
             <NavLink
               to="/location"
               className="nav-link d-flex align-items-center gap-1"
-              activeClassName="active"
+              // activeClassName="active"
             >
               <BiCurrentLocation /> Locations
             </NavLink>
