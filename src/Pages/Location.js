@@ -25,11 +25,11 @@ function Location() {
   }, [api]);
 
   return (
-    <div className="container">
+    <section className="container mb-4">
       <div className="row mt-4 mb-5">
         <h1 className="text-center text-white mb-3">
           Location:{" "}
-          <span className="text-primary">{name === "" ? "Unknown" : name}</span>
+          <span style={{ color: "#00b5cc"}}>{name === "" ? "Unknown" : name}</span>
         </h1>
         <h5 className="text-center text-secondary">
           Dimension: {dimension === "" ? "Unknown" : dimension}
@@ -44,11 +44,11 @@ function Location() {
       </div>
       <div className="col-lg-8 col-12">
         <div className="row">
-          <Card page="/location/" results={results} />
+          <Card page="/locations/" results={results} />
         </div>
       </div>
     </div>
-    </div>
+    </section>
   );
 }
 

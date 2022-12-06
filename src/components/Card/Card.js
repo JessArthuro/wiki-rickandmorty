@@ -22,11 +22,11 @@ function Card({ page, results }) {
             <img className="img-fluid" src={image} alt={name} />
 
             <div className={styles.content}>
-              <h5
+              <h4
                 className={`${styles.name_character} fw-bold text-truncate my-1`}
               >
                 {name}
-              </h5>
+              </h4>
 
               <div className="d-flex align-items-center">
                 <span
@@ -45,7 +45,7 @@ function Card({ page, results }) {
 
               <div className="text-secondary">
                 <p className="mt-3 mb-0">Last Location:</p>
-                <p className="fw-bold text-truncate mb-2">{location.name}</p>
+                <p className="text-white text-truncate mb-2">{location.name}</p>
               </div>
             </div>
           </div>

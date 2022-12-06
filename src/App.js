@@ -9,6 +9,7 @@ import Filter from "./components/Filter/Filter";
 import Navbar from "./components/Navbar/Navbar";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Welcome from "./Pages/Welcome";
 import Episodes from "./Pages/Episodes";
 import Location from "./Pages/Location";
 import CardDetails from "./components/Card/CardDetails";
@@ -22,14 +23,15 @@ function App() {
       </div>
       <Routes>
         {/* Cada ruta requiere de dos cosas: el path que es el que conducira la aplicacion y el element que es lo que se cargara. */}
-        <Route path="/" element={<Home />} />
-        <Route path="/:id" element={<CardDetails />} />
+        <Route path="/" element={<Welcome />} />
+        <Route path="/characters" element={<Home />} />
+        <Route path="/characters/:id" element={<CardDetails />} />
 
         <Route path="/episodes" element={<Episodes />} />
         <Route path="/episodes/:id" element={<CardDetails />} />
 
-        <Route path="/location" element={<Location />} />
-        <Route path="/location/:id" element={<CardDetails />} />
+        <Route path="/locations" element={<Location />} />
+        <Route path="/locations/:id" element={<CardDetails />} />
       </Routes>
     </Router>
   );
@@ -77,8 +79,8 @@ const Home = () => {
             setPageNumber={setPageNumber}
           />
           <div className="col-lg-8 col-12">
-            <div className="row">
-              <Card page="/" results={results} />
+            <div className="row text-white">
+              <Card page="/characters/" results={results} />
             </div>
           </div>
         </div>

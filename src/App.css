@@ -11,7 +11,7 @@ body {
 /* Estilos para la pestaña activa en el navbar */
 .active {
   color: #00b5cc !important;
-  font-weight: bold;
+  font-weight: 600;
   border-bottom: 2px solid #b2df28;
   margin-bottom: -2px;
 }
@@ -37,7 +37,7 @@ body {
   box-shadow: none;
 }
 
-/* colores del logo de rick and morty */
-/* azul #00b5cc */
-/* verde #b2df28 */
-/* negro #00333d */
+.navbar-toggler:focus {
+  outline: 0;
+  box-shadow: none;
+}

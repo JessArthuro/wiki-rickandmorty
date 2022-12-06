@@ -1,14 +1,15 @@
-$radius: 10px;
+$radius: 0.75rem;
 
 .card {
   border-radius: $radius;
   background-color: rgba(235, 248, 255, .04);
-  transition: all .3s linear;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  transition: all .3s ease;
   overflow: hidden;
   cursor: pointer;
 
   &:hover {
-    border: 2px solid #00b5cc;
+    border: 1.5px solid #00b5cc;
     background: none;
     transform: translateY(-5px);
 
@@ -29,5 +30,32 @@ $radius: 10px;
 
   &.success {
     background: rgb(85, 204, 68);
+  }
+}
+
+// ---------------------------- CardDetails ------------------------------------
+
+.card_details {
+  background-color: rgba(235, 248, 255, .04);
+  overflow: hidden;
+  border-radius: $radius;
+  border: 1.5px solid #00b5cc;
+  margin-top: 2rem;
+}
+
+.img_card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details_title {
+  color: #b2df28;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .card_data {
+    border-left: 1.5px solid #00b5cc;
   }
 }
