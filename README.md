@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+<img src="./src/img/RickMortyLogo.png" alt="Logo Olympia" height="100" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Wiki - Rick and Morty
 
-In the project directory, you can run:
+Wiki de personajes de Rick and Morty, incluye: paginación, barra de búsqueda, filtrado de datos y enrutamiento dinámico. Tecnologías y librerías utilizadas: ReactJs, Bootstrap, Sass | react-icons, react-loading-skeleton, react-lazy-load-image-component, react-paginate y react-router-dom.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Screenshot](./src/img/screenshot-demo.png "Desktop and Mobile Screenshot")
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo en vivo
 
-### `npm run build`
+URL del sitio en vivo: [Wiki - Rick and Morty](https://jsarturo-rickandmorty.netlify.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Ejecutar localmente
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clonar el proyecto
 
-### `npm run eject`
+```bash
+  git clone https://github.com/JessArthuro/wiki-rickandmorty.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ir al directorio del proyecto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  cd wiki-rickandmorty
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Instalar dependencias
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  npm install
+```
 
-## Learn More
+Inicie el servidor
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Ejecución de pruebas
 
-### Analyzing the Bundle Size
+Para ejecutar pruebas, ejecute el siguiente comando
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+  npm test
+```
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Implementación a producción
 
-### Advanced Configuration
+Para implementar la aplicación en producción, ejecute el siguiente comando
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+  npm run build
+```
