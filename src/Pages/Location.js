@@ -29,25 +29,29 @@ function Location() {
       <div className="row mt-4 mb-5">
         <h1 className="text-center text-white mb-3">
           Location:{" "}
-          <span style={{ color: "#00b5cc"}}>{name === "" ? "Unknown" : name}</span>
+          <span style={{ color: "#00b5cc" }}>
+            {name === "" ? "Unknown" : name}
+          </span>
         </h1>
         <h5 className="text-center text-secondary">
           Dimension: {dimension === "" ? "Unknown" : dimension}
         </h5>
-        <h6 className="text-center text-secondary">Type: {type === "" ? "Unknown" : type}</h6>
+        <h6 className="text-center text-secondary">
+          Type: {type === "" ? "Unknown" : type}
+        </h6>
       </div>
 
       <div className="row">
-      <div className="col-lg-3 col-12 mb-4">
-        <h4 className="text-center text-white mb-4">Pick Episode</h4>
-        <InputGroup name="Location" changeID={setNumber} total={126} />
-      </div>
-      <div className="col-lg-8 col-12">
-        <div className="row">
-          <Card page="/locations/" results={results} />
+        <div className="col-lg-3 col-12 mb-4">
+          <h4 className="text-center text-white mb-4">Pick Episode</h4>
+          <InputGroup name="Location" changeID={setNumber} total={126} />
+        </div>
+        <div className="col-lg-8 col-12">
+          <div className="row">
+            <Card page="/locations/" results={results} />
+          </div>
         </div>
       </div>
-    </div>
     </section>
   );
 }

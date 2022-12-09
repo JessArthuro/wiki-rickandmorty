@@ -54,8 +54,42 @@ $radius: 0.75rem;
   font-weight: 600;
 }
 
+// ---------------------------- Skeleton ------------------------------------
+
+.skeleton_img {
+  width: 100% !important;
+}
+
+.skeleton_name {
+  width: 75% !important;
+}
+
+.skeleton_status {
+  width: 50% !important;
+}
+
+.skeleton_info {
+  width: 60% !important;
+}
+
 @media (min-width: 768px) {
   .card_data {
     border-left: 1.5px solid #00b5cc;
+  }
+
+  .skeleton_img {
+    width: 300px !important;
+  }
+
+  .skeleton_name {
+    width: 300px !important;
+  }
+
+  .skeleton_status {
+    width: 200px !important;
+  }
+
+  .skeleton_info {
+    width: 100% !important;
   }
 }

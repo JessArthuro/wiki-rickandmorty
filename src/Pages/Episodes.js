@@ -29,7 +29,9 @@ function Episodes() {
       <div className="row mt-4 mb-5">
         <h1 className="text-center text-white mb-3">
           Episode name:{" "}
-          <span style={{ color: "#00b5cc"}}>{name === "" ? "Unknown" : name}</span>
+          <span style={{ color: "#00b5cc" }}>
+            {name === "" ? "Unknown" : name}
+          </span>
         </h1>
         <h5 className="text-center text-secondary">
           Air Date: {air_date === "" ? "Unknown" : air_date}

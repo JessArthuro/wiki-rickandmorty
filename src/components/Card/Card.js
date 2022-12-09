@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LazyImage from "./LazyImage";
 import styles from "./Card.module.scss";
 
 function Card({ page, results }) {
@@ -19,7 +20,7 @@ function Card({ page, results }) {
           <div
             className={`${styles.card} d-flex flex-column justify-content-center`}
           >
-            <img className="img-fluid" src={image} alt={name} />
+            <LazyImage src={image} alt={name} />
 
             <div className={styles.content}>
               <h4

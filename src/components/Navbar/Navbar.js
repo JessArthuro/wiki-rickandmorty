@@ -9,7 +9,7 @@ function Navbar() {
       style={{ background: "rgba(235, 248, 255, .04)" }}
     >
       <div className="container">
-        <Link to="/" className="navbar-brand fs-3 ubuntu">
+        <Link to="/characters" className="navbar-brand fs-3 ubuntu">
           <img
             style={{ height: "3rem" }}
             src={logo}

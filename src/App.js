@@ -9,10 +9,11 @@ import Filter from "./components/Filter/Filter";
 import Navbar from "./components/Navbar/Navbar";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Welcome from "./Pages/Welcome";
 import Episodes from "./Pages/Episodes";
 import Location from "./Pages/Location";
 import CardDetails from "./components/Card/CardDetails";
+
+import { SkeletonTheme } from "react-loading-skeleton";
 import "./App.css";
 
 function App() {
@@ -21,18 +22,19 @@ function App() {
       <div className="Navbar">
         <Navbar />
       </div>
-      <Routes>
-        {/* Cada ruta requiere de dos cosas: el path que es el que conducira la aplicacion y el element que es lo que se cargara. */}
-        <Route path="/" element={<Welcome />} />
-        <Route path="/characters" element={<Home />} />
-        <Route path="/characters/:id" element={<CardDetails />} />
+      <SkeletonTheme baseColor="#151718" highlightColor="#ebf8ff0a">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/characters" element={<Home />} />
+          <Route path="/characters/:id" element={<CardDetails />} />
 
-        <Route path="/episodes" element={<Episodes />} />
-        <Route path="/episodes/:id" element={<CardDetails />} />
+          <Route path="/episodes" element={<Episodes />} />
+          <Route path="/episodes/:id" element={<CardDetails />} />
 
-        <Route path="/locations" element={<Location />} />
-        <Route path="/locations/:id" element={<CardDetails />} />
-      </Routes>
+          <Route path="/locations" element={<Location />} />
+          <Route path="/locations/:id" element={<CardDetails />} />
+        </Routes>
+      </SkeletonTheme>
     </Router>
   );
 }
