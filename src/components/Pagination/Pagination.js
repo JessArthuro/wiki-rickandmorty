@@ -8,11 +8,12 @@ function Pagination({ pageNumber, info, setPageNumber }) {
     setPageNumber(data.selected + 1);
   };
 
-  // Creamos este pequeño componente para que nuestro componente de paginacion se adapte al tamaño de la pantalla.
   const [width, setWidth] = useState(window.innerWidth);
+
   const updateDimensions = () => {
     setWidth(window.innerWidth);
   };
+  // Evento para adaptar la paginacion a distintos tamaños de pantalla.
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
@@ -20,40 +21,21 @@ function Pagination({ pageNumber, info, setPageNumber }) {
 
   return (
     <>
-      <style jsx="true">
-        {`
-          a {
-            color: white;
-            text-decoration: none;
-          }
-          @media (max-width: 768px) {
-            .pagination {
-              font-size: 12px;
-            }
-            .next,
-            .prev {
-              display: none;
-            }
-          }
-        `}
-      </style>
-      
-      {/* Usamos las propiedades integradas de react-paginate para darle un poco de estilo */}
-      <ReactPaginate 
-        className="pagination justify-content-center my-4 gap-4"
-        nextLabel={<BiChevronRight />}
+      <ReactPaginate
+        className="pagination justify-content-center align-items-center my-5 gap-4 text-white"
         previousLabel={<BiChevronLeft />}
-        previousClassName="btn btn-primary fs-6 prev"
-        nextClassName="btn btn-primary fs-6 next"
-        activeClassName="active"
+        nextLabel={<BiChevronRight />}
+        previousLinkClassName="link-prev"
+        nextLinkClassName="link-next"
+        activeClassName="active-page"
         pageClassName="page-item"
         pageLinkClassName="page-link"
-
-        forcePage={pageNumber === 1 ? 0 : pageNumber -1}
-        marginPagesDisplayed={width < 576 ? 1 : 2}
-        pageRangeDisplayed={width < 576 ? 1 : 2}
-        pageCount={info?.pages}
-        onPageChange={pageChange}
+        breakLabel={width < 576 ? "" : "..."}
+        forcePage={pageNumber === 1 ? 0 : pageNumber - 1} // Controlamos el numero de pagina desde el estado de la aplicacion.
+        marginPagesDisplayed={width < 576 ? 0 : 1} // El numero de paginas a mostrar para los margenes.
+        pageRangeDisplayed={width < 576 ? 1 : 2} // Rango de paginas mostradas alrededor de la activa.
+        pageCount={info?.pages} // Numero total de paginas.
+        onPageChange={pageChange} // Este metodo expone el objeto de la pagina actual como un argumento.
       />
     </>
   );

@@ -9,7 +9,7 @@ function LazyImage({ src, alt }) {
         src={src}
         alt={alt}
         width="100%"
-        height={200}
+        className="lazy-image"
         style={{ objectFit: "cover" }}
         placeholderSrc={PlaceholderImg}
       />

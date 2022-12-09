@@ -48,3 +48,58 @@ body {
   outline: 0;
   box-shadow: none;
 }
+
+/* ---------------------------- Lazy Load Image ------------------------------------ */
+
+.lazy-image {
+  height: 200px;
+}
+
+@media (max-width: 575px) {
+  .lazy-image {
+    height: 300px;
+  }
+}
+
+/* ---------------------------- Pagination ------------------------------------ */
+
+.page-link {
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(235, 248, 255, 0.04);
+  color: #6c757d;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.page-link:hover {
+  background: none;
+  color: #fff;
+}
+
+.page-link:focus {
+  box-shadow: none;
+}
+
+.active-page .page-link {
+  background-color: #b2df28;
+  color: #151718;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.link-prev,
+.link-next {
+  background-color: #00b5cc;
+  color: #151718;
+  font-size: 1.5rem;
+  padding: 0.4rem 0.45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.link-prev:hover,
+.link-next:hover {
+  color: #fff;
+}
