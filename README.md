@@ -8,7 +8,7 @@ Wiki de personajes de Rick and Morty, incluye: paginación, barra de búsqueda, 
 
 ## Screenshots
 
-![Screenshot](./src/img/screenshot-demo.png "Desktop and Mobile Screenshot")
+![Screenshot](./src/img/screenshots.png "Desktop and Mobile Screenshot")
 
 
 ## Demo en vivo
